@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    image: paymentblog
+    container_name: backcont
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+
+
+  blogpgdb:
+    volumes:
+      - blogpgdbvol:/var/lib/postgresql/data
+    image: postgres:alpine3.14
+    container_name: blogpgdbcont
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./core/.env
+    
+
+
+volumes:
+  blogpgdbvol:

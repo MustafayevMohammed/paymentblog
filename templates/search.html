@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% for result in search_results %}
+
+    <ul>
+        <li>{{result.title}}</li>
+    </ul>
+
+{% endfor %}
+{% endblock body %}

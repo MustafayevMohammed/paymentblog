@@ -26,6 +26,8 @@ Languages==1.0.0
 phonenumbers==8.12.38
 platformdirs==2.3.0
 prompt-toolkit==3.0.20
+django-ckeditor
+django-taggit
 # psycopg==3.0.8
 # psycopg-binary==3.0.8
 psycopg2-binary>=2.9
